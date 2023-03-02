@@ -25,3 +25,22 @@ navIconEl.addEventListener('click', navOpen);
 navCloseEl.addEventListener('click', navClose);
 
 navBgOverlayEl.addEventListener('click', navClose)
+
+#counter;
+
+let counts=0;
+let c=document.getElementById("counter");
+var q=document.querySelectorAll("#count");
+for(var i=0;i<q.length;i++)
+{
+  q[i].addEventListener("click",event=>{
+  var k=c.classList;
+  var m='animated-counter';
+  counts++;
+  c.innerText=counts;
+  k.remove(m,k.contains(m));
+  setTimeout(()=>
+    c.classList.add('animated-counter'),0
+  )
+})
+}

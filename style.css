@@ -65,11 +65,6 @@ p {
 }
 
 /* Nav Styles */
-
-/* .nav {
-    padding: 1rem 0;
-} */
-
 .nav__icon,
 .nav__close,
 .nav__bgOverlay {
@@ -112,7 +107,6 @@ p {
 }
 
 @media only screen and (max-width: 748px) {
-
     .nav {
         position: relative;
         /* overflow-x: scroll; */
@@ -249,6 +243,33 @@ p {
     color: rgb(233, 20, 20);
     cursor: pointer;
 }
+.counter-container span:not(.animated-counter)
+{
+    display: none;
+}.counter-container span.animated-counter
+{
+    animation: counts .4s ease-in-out;
+}
+#count.active
+{
+    position: absolute;
+    
+}
+#counter
+{
+    user-select: none;
+    position: absolute;
+    background: rgb(214, 18, 18);
+    border-radius: 82px;
+    font-size: 15px;
+    color: white;
+    top: 43px;
+    right: 18px;
+    width: 15px;
+    height:17px;
+    align-items: center;
+    text-align: center;
+}
 
 @media only screen and (max-width: 768px) {
     .container {
@@ -377,7 +398,7 @@ p {
         display: grid;
         /* grid-template-columns: repeat(autofit, minmax(140px, 1fr)); */
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 1rem;
+        gap: 6rem;
     }
 }
 
@@ -713,7 +734,13 @@ footer .col .image {
 
 .image_f img {
     width: 100%;
-    border-radius: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}.image_f img:hover{
+
+    transform: translateY(-5px);
+    box-shadow: 1px 2px 6px 2px rgb(219 219 219);
 }
 
 .small_images {
@@ -737,7 +764,7 @@ footer .col .image {
     display: flex;
 }
 
-#btn_2 {
+.btn_2 {
     width: 100px;
     height: 40px;
     color: #fff;
@@ -749,9 +776,8 @@ footer .col .image {
     cursor: pointer;
 }
 
-#count {
+.count {
     position: absolute;
-    top: -8px;
 }
 
 #input_1 {
@@ -1018,6 +1044,10 @@ footer .col .image {
     .small_images_col img 
     {
         width: 24px;
+    }#feature .pro-container {
+       
+        gap: 6rem;
+        padding: 20px;
     }
 
     .h-1 button {
@@ -1119,6 +1149,21 @@ footer .col .image {
     text-align: center;
     align-items: center;
     padding: 0px 20px 0px 0px;
+    }#counter
+    {
+        top: 240px;
+        right: 50px;
     }
 
 }
+/* @media (max-width:525px)
+{
+    #feature .pro-container {
+        width: 100%;
+    }
+}@media (max-width:677px)
+{
+    #feature .pro-container {
+        width: 100%;
+    }
+} */
